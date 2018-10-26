@@ -78,7 +78,7 @@ static inline int
 _odbcmysql_real_query (
   MYSQL               *mysql,
   const char          *query,
-#if (LIBMYSQL_VERSION_ID < 60111)
+#if (LIBMYSQL_VERSION_ID < 50724)
   unsigned int        query_length_in_bytes
 #else
   unsigned long       query_length_in_bytes
@@ -97,7 +97,7 @@ int __stdcall
 mysql_real_query (
   MYSQL               *mysql,
   const char          *q,
-#if (LIBMYSQL_VERSION_ID < 60111)
+#if (LIBMYSQL_VERSION_ID < 50724)
   unsigned int        length
 #else
   unsigned long       length

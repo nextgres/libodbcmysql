@@ -82,7 +82,7 @@ _odbcmysql_query (
   log_trace("Entering Function %s", __func__);
 
   /* Proxy this call to mysql_real_query */
-  return (mysql_real_query(mysql, q, SQL_NTS));
+  return (mysql_real_query(mysql, q, NULL));
 
 } /* _odbcmysql_query() */
 

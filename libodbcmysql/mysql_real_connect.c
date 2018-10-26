@@ -83,7 +83,7 @@ _odbcmysql_real_connect (
   const char          *db,
   unsigned int         port,
   const char          *unix_socket,
-#if (LIBMYSQL_VERSION_ID < 60111)
+#if (LIBMYSQL_VERSION_ID < 50724)
   unsigned int        clientflag
 #else
   unsigned long       clientflag
@@ -107,7 +107,7 @@ mysql_real_connect (
   const char          *db,
   unsigned int         port,
   const char          *unix_socket,
-#if (LIBMYSQL_VERSION_ID < 60111)
+#if (LIBMYSQL_VERSION_ID < 50724)
   unsigned int        clientflag
 #else
   unsigned long       clientflag

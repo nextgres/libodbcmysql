@@ -74,6 +74,7 @@
 /* -- PRIVATE METHODS ------------------------------------------------------ */
 /* ========================================================================= */
 
+#if (LIBMYSQL_VERSION_ID > 80000)
 static inline MYSQL_PARAMETERS *
 _odbcmysql_get_parameters (
   void
@@ -82,11 +83,13 @@ _odbcmysql_get_parameters (
 
   NOOP_RETURN(0);
 } /* _odbcmysql_get_parameters() */
+#endif
 
 /* ========================================================================= */
 /* -- PUBLIC METHODS ------------------------------------------------------- */
 /* ========================================================================= */
 
+#if (LIBMYSQL_VERSION_ID > 80000)
 MYSQL_PARAMETERS * __stdcall
 mysql_get_parameters (
   void
@@ -95,6 +98,7 @@ mysql_get_parameters (
 
   return (_odbcmysql_get_parameters());
 } /* mysql_get_parameters() */
+#endif
 
 /* :vi set ts=2 et sw=2: */
 

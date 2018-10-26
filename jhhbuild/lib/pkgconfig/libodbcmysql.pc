@@ -1,0 +1,12 @@
+prefix=/root/oss-libodbcmysql/jhhbuild
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libfdata
+Description: Library to provide generic file data functions
+Version: 20181010
+Libs: -L${libdir} -lfdata
+Libs.private: @ax_libcdata_pc_libs_private@ @ax_libcerror_pc_libs_private@ @ax_libcnotify_pc_libs_private@ @ax_libcthreads_pc_libs_private@ @ax_libfcache_pc_libs_private@ -lpthread
+Cflags: -I${includedir}
+
